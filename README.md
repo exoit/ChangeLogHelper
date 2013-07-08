@@ -8,6 +8,7 @@ Usage
 Create your changelog xml file using the format shown below and add it to your **res/xml** directory.
 
 ```xml
+<?xml version="1.0" encoding="utf-8"?>
 <changelog>
     <release
         versionName="1.0.1"
