@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="changelog_title">Changelog</string>
+    <string name="changelog_current">%20(Current)</string>
+    <string name="changelog_missing"><![CDATA[<html><body><h1>Changelog not found</h1></body></html>]]></string>
+</resources>
