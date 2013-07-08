@@ -2,6 +2,10 @@ ChangeLogHelper
 ===============
 This library generates an activity showing the app's changelog from an xml file.
 
+Example
+------
+![Changelog Example Screenshot][1]
+
 
 Usage
 -----
@@ -53,3 +57,4 @@ You may obtain a copy of the License at
    limitations under the License.
 </code></pre>
 
+[1]: https://raw.github.com/exoit/ChangeLogHelper/master/sample/changelog.png
