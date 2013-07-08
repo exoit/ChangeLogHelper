@@ -12,12 +12,13 @@ Create your changelog xml file using the format shown below and add it to your *
     <release
         versionName="1.0.1"
         versionCode="2">
-        <change>Added awesome stuff.</change>
+        <change>Added Awesome Stuff.</change>
+        <change>Added More Awesome Stuff.</change>
     </release>
     <release
         versionName="1.0.0"
         versionCode="1">
-        <change>Initial release.</change>
+        <change>Initial Release.</change>
     </release>
 </changelog>
 ```
