@@ -5,9 +5,6 @@ import se.puzzlingbytes.changeloghelper.R;
 
 import java.util.ArrayList;
 
-/**
- * Created by exoit on 2013-06-29.
- */
 public class ChangeLogEntry {
 
     private static final String VERSION_START_HTML_TAG = "<h1>";

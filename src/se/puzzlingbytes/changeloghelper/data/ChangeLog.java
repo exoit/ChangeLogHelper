@@ -2,9 +2,6 @@ package se.puzzlingbytes.changeloghelper.data;
 
 import java.util.ArrayList;
 
-/**
- * Created by exoit on 2013-06-29.
- */
 public class ChangeLog {
     private static final String CHANGELOG_HTML_STYLE = "<style type=\"text/css\">"
             + "h1 { margin-left: 0px; font-size: 12pt;}"
