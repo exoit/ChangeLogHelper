@@ -27,7 +27,10 @@ Create your changelog xml file using the format shown below and add it to your *
 Add the ChangeLogActivity to your app's AndroidManifest.
 
 ```xml
-<activity android:name="se.puzzlingbytes.changeloghelper.ChangeLogActivity" />
+<activity
+    android:name="se.puzzlingbytes.changeloghelper.ChangeLogActivity"
+    android:label="@string/changelog_title" >
+</activity>
 ```
 
 Start the activity either by generating an intent with **getChangeLogIntent(Context, ChangeLogXmlResID)** or manually creating an intent and setting the ChangeLogXmlResID with the EXTRA_CHANGELOG_XML_RESID intent extra constant in ChangeLogActivity.
