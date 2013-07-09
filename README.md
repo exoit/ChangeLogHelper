@@ -1,6 +1,6 @@
 ChangeLogHelper
 ===============
-This library generates an activity showing the app's changelog from an xml file.
+This library makes it easy to show your app's changelog in an activity.
 
 Example
 ------
@@ -28,7 +28,7 @@ Create your changelog xml file using the format shown below and add it to your *
 </changelog>
 ```
 
-### Built in activity
+### Use the activity provided in the library
 
 Add the ChangeLogActivity to your app's AndroidManifest.
 
