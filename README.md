@@ -38,7 +38,7 @@ Add the ChangeLogActivity to your app's AndroidManifest.
     android:label="@string/changelog_title" >
 </activity>
 ```
-Start the activity either by generating an intent with **getChangeLogIntent(Context, ChangeLogXmlResID)** or by manually creating the intent with the change log xml resource id as extra with the constant **EXTRA_CHANGELOG_XML_RESID** found in ChangeLogActivity.
+Start the activity either by generating an intent with **getChangeLogIntent(Context, ChangeLogXmlResID)** or by manually creating the intent with the changelog xml resource id as extra with the constant **EXTRA_CHANGELOG_XML_RESID** found in ChangeLogActivity.
 
 ### Manually handle the data
 
