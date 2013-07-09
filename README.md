@@ -28,6 +28,8 @@ Create your changelog xml file using the format shown below and add it to your *
 </changelog>
 ```
 
+### Built in activity
+
 Add the ChangeLogActivity to your app's AndroidManifest.
 
 ```xml
@@ -36,8 +38,17 @@ Add the ChangeLogActivity to your app's AndroidManifest.
     android:label="@string/changelog_title" >
 </activity>
 ```
+Start the activity either by generating an intent with **getChangeLogIntent(Context, ChangeLogXmlResID)** or by manually creating the intent with the change log xml resource id as extra with the constant **EXTRA_CHANGELOG_XML_RESID** found in ChangeLogActivity.
 
-Start the activity either by generating an intent with **getChangeLogIntent(Context, ChangeLogXmlResID)** or manually creating an intent and setting the ChangeLogXmlResID with the EXTRA_CHANGELOG_XML_RESID intent extra constant in ChangeLogActivity.
+### Manually handle the data
+
+Example below shows how to parse and generate the HTML page.
+
+```java
+ChangeLogParser changeLogParser = new ChangeLogParser(context);
+ChangeLog changeLog = changeLogParser.parse(changeLogXMLResID);
+changeLog.generateChangeLogHTML()
+```
 
 License
 -------
