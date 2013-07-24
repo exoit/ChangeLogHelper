@@ -13,14 +13,34 @@ import se.puzzlingbytes.changeloghelper.parser.ChangeLogParser;
 
 public class ChangeLogActivity extends Activity {
 
+    /**
+     * Changelog XML resource id.</br> 
+     * Constant value: {@value #EXTRA_CHANGELOG_XML_RESID}
+     */
     public static final String EXTRA_CHANGELOG_XML_RESID = "extra_changelog_xml_resid";
 
+    /**
+     * Boolean to indicate if the date should be shown.</br> 
+     * Constant value: {@value #EXTRA_CHANGELOG_SHOW_DATE}
+     */
     public static final String EXTRA_CHANGELOG_SHOW_DATE = "extra_changelog_show_date";
 
+    /**
+     * Boolean to indicate if the current version mark should be shown.</br>
+     * Constant value: {@value #EXTRA_CHANGELOG_SHOW_CURRENT}
+     */
     public static final String EXTRA_CHANGELOG_SHOW_CURRENT = "extra_changelog_show_current";
 
+    /**
+     * Custom CSS style string.</br> 
+     * Constant value: {@value #EXTRA_CHANGELOG_CSS_STR}
+     */
     public static final String EXTRA_CHANGELOG_CSS_STR = "extra_changelog_css_str";
 
+    /**
+     * String resource id to a custom CSS style string.</br> 
+     * Constant value: {@value #EXTRA_CHANGELOG_CSS_RESID}
+     */
     public static final String EXTRA_CHANGELOG_CSS_RESID = "extra_changelog_css_resid";
 
     private static final String MIME_TYPE_TEXT_HTML = "text/html";

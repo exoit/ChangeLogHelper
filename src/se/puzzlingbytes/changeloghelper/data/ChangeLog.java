@@ -6,15 +6,15 @@ import android.text.TextUtils;
 import java.util.ArrayList;
 
 public class ChangeLog {
-    
+
     private static final String HTML_STYLE_CSS = "h1 { margin-left: 0px; font-size: 12pt;} " +
             "ul { margin-top: -5px;} " +
             "li { margin-top: 10px; margin-left: 0px; font-size: 9pt;}";
-    
+
     private static final String HTML_START = "<html><head><style type=\"text/css\">";
-    
+
     private static final String HTML_MIDDLE = "</style></head><body>";
-    
+
     private static final String HTML_END = "</body></html>";
 
     private ArrayList<ChangeLogEntry> mChangeLogEntryList = new ArrayList<ChangeLogEntry>();
