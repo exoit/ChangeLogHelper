@@ -42,7 +42,7 @@ public class ChangeLogActivity extends Activity {
      * Constant value: {@value #EXTRA_CHANGELOG_CSS_RESID}
      */
     public static final String EXTRA_CHANGELOG_CSS_RESID = "extra_changelog_css_resid";
-
+    
     private static final String MIME_TYPE_TEXT_HTML = "text/html";
 
     private static final String ENCODING_UTF8 = "utf-8";
@@ -91,7 +91,7 @@ public class ChangeLogActivity extends Activity {
         }
         return changeLogintent;
     }
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -112,6 +112,15 @@ public class ChangeLogActivity extends Activity {
         mWebView = (WebView) findViewById(R.id.changelog_webview);
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(EXTRA_CHANGELOG_XML_RESID, mChangeLogResID);
+        outState.putBoolean(EXTRA_CHANGELOG_SHOW_DATE, mShowDate);
+        outState.putBoolean(EXTRA_CHANGELOG_SHOW_CURRENT, mShowCurrent);
+        outState.putString(EXTRA_CHANGELOG_CSS_STR, mStyle);
+    }
+    
     @Override
     protected void onStart() {
         super.onStart();
