@@ -87,7 +87,7 @@ public class ChangeLogActivity extends Activity {
         if (!TextUtils.isEmpty(cssStyle)) {
             changeLogintent.putExtra(EXTRA_CHANGELOG_CSS_STR, cssStyle);
         } else if (cssStyleResID > 0) {
-            changeLogintent.putExtra(EXTRA_CHANGELOG_CSS_RESID, cssStyle);
+            changeLogintent.putExtra(EXTRA_CHANGELOG_CSS_RESID, cssStyleResID);
         }
         return changeLogintent;
     }
@@ -104,7 +104,7 @@ public class ChangeLogActivity extends Activity {
             mShowCurrent = intent.getBooleanExtra(EXTRA_CHANGELOG_SHOW_CURRENT,
                     false);
             mStyle = intent.getStringExtra(EXTRA_CHANGELOG_CSS_STR);
-            int styleResID = intent.getIntExtra(EXTRA_CHANGELOG_XML_RESID, -1);
+            int styleResID = intent.getIntExtra(EXTRA_CHANGELOG_CSS_RESID, -1);
             if (TextUtils.isEmpty(mStyle) && styleResID > 0) {
                 mStyle = getString(styleResID);
             }
