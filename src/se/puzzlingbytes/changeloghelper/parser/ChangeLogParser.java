@@ -1,3 +1,4 @@
+
 package se.puzzlingbytes.changeloghelper.parser;
 
 import android.content.Context;
@@ -14,12 +15,21 @@ import se.puzzlingbytes.changeloghelper.data.ChangeLogEntry;
 import java.io.IOException;
 
 public class ChangeLogParser {
+    
     private static final String TAG = ChangeLogParser.class.getSimpleName();
+    
     private static final String RELEASE_TAG = "release";
+    
     private static final String RELEASE_ATTR_VERSIONNAME = "versionName";
+    
     private static final String RELEASE_ATTR_VERSIONCODE = "versionCode";
+    
+    private static final String RELEASE_ATTR_VERSIONDATE = "versionDate";
+    
     private static final String CHANGE_TAG = "change";
+    
     private Context mContext;
+   
     private String mCurrentVersionCode = null;
 
     public ChangeLogParser(Context context) {
@@ -56,7 +66,8 @@ public class ChangeLogParser {
         return null;
     }
 
-    private ChangeLog readChangeLog(XmlPullParser parser) throws XmlPullParserException, IOException {
+    private ChangeLog readChangeLog(XmlPullParser parser) throws XmlPullParserException,
+            IOException {
         ChangeLog changeLog = new ChangeLog();
         ChangeLogEntry changeLogEntry;
         int eventType = parser.getEventType();
@@ -76,14 +87,18 @@ public class ChangeLogParser {
         return changeLog;
     }
 
-    private ChangeLogEntry readChangeLogEntry(XmlPullParser parser) throws XmlPullParserException, IOException {
+    private ChangeLogEntry readChangeLogEntry(XmlPullParser parser) throws XmlPullParserException,
+            IOException {
         ChangeLogEntry changeLogEntry = new ChangeLogEntry(mContext);
         for (int i = 0; i < parser.getAttributeCount(); i++) {
             if (parser.getAttributeName(i).equalsIgnoreCase(RELEASE_ATTR_VERSIONCODE)) {
                 changeLogEntry.setVersionCode(parser.getAttributeValue(i));
-                changeLogEntry.setCurrentVersion(TextUtils.equals(parser.getAttributeValue(i), mCurrentVersionCode));
+                changeLogEntry.setCurrentVersion(TextUtils.equals(parser.getAttributeValue(i),
+                        mCurrentVersionCode));
             } else if (parser.getAttributeName(i).equalsIgnoreCase(RELEASE_ATTR_VERSIONNAME)) {
                 changeLogEntry.setVersionName(parser.getAttributeValue(i));
+            } else if (parser.getAttributeName(i).equalsIgnoreCase(RELEASE_ATTR_VERSIONDATE)) {
+                changeLogEntry.setVersionDate(parser.getAttributeValue(i));
             }
         }
         int eventType = parser.getEventType();
