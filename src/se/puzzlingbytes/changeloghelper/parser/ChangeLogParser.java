@@ -15,21 +15,21 @@ import se.puzzlingbytes.changeloghelper.data.ChangeLogEntry;
 import java.io.IOException;
 
 public class ChangeLogParser {
-    
+
     private static final String TAG = ChangeLogParser.class.getSimpleName();
-    
+
     private static final String RELEASE_TAG = "release";
-    
+
     private static final String RELEASE_ATTR_VERSIONNAME = "versionName";
-    
+
     private static final String RELEASE_ATTR_VERSIONCODE = "versionCode";
-    
+
     private static final String RELEASE_ATTR_VERSIONDATE = "versionDate";
-    
+
     private static final String CHANGE_TAG = "change";
-    
+
     private Context mContext;
-   
+
     private String mCurrentVersionCode = null;
 
     public ChangeLogParser(Context context) {
