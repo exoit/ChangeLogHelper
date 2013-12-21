@@ -6,14 +6,6 @@
 
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="17" />
-
-    <application
-        android:allowBackup="false" >
-        <activity
-            android:name="se.puzzlingbytes.changeloghelper.ChangeLogActivity"
-            android:label="@string/changelog_title" >
-        </activity>
-    </application>
+        android:targetSdkVersion="18" />
 
 </manifest>
